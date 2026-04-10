@@ -20,10 +20,6 @@ class CfgFunctions {
                 preInit = 1;
                 file = "\z\lumchem\addons\main\initServer.sqf";
             };
-            class postInit {
-                postInit = 1;
-                file = "\z\lumchem\addons\main\initClient.sqf";
-            };
         };
         class Main {
             file = "\z\lumchem\addons\main\functions";
