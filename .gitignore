@@ -1,0 +1,10 @@
+*.pbo
+.hemttout
+hemtt
+hemtt.exe
+*.biprivatekey
+*.hemttprivatekey
+*.code-workspace
+*.hemtt
+a3/
+releases/
