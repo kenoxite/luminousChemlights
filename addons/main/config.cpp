@@ -18,15 +18,15 @@ class CfgFunctions {
         class Init {
             class preInit {
                 preInit = 1;
-                file = "\z\lumChem\addons\main\initServer.sqf";
+                file = "\z\lumchem\addons\main\initServer.sqf";
             };
             class postInit {
                 postInit = 1;
-                file = "\z\lumChem\addons\main\initClient.sqf";
+                file = "\z\lumchem\addons\main\initClient.sqf";
             };
         };
         class Main {
-            file = "\z\lumChem\addons\main\functions";
+            file = "\z\lumchem\addons\main\functions";
             
             class addEventHandler {};
             class removeEventHandler {};
