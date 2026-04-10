@@ -2,6 +2,8 @@
 
 if (!isServer) exitWith {};
 
+KLC_minLuminance = 100;
+
 addMissionEventHandler ["EntityCreated", {
     params ["_entity"];
     if (_entity isKindOf "CAManBase") then {
@@ -38,6 +40,3 @@ addMissionEventHandler ["TeamSwitch", {
     // Add chemlight Fired EH
     [_newUnit] remoteExec ["KLC_fnc_addEventHandler", _newUnit];
 }];
-
-
-KLC_minLuminance = 400;
