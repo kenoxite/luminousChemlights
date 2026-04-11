@@ -2,17 +2,22 @@
 
 ### Info
 
-Makes thrown chemlights emit visible light during daytime, with intensity that adjusts to the current ambient luminance.
+Makes thrown chemlights glow in daytime, with intensity that adjusts to the current ambient luminance.
 
-You can check the already packed version by visiting this addon's [Steam Workshop](xxx) page.
+You can check the already packed version by visiting this addon's [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3704042350) page.
 
 ### Features
 
-- Chemlights emit light during daytime
+- Thrown chemlights emit light during daytime
 - Light intensity adjusts to current ambient luminance
+- Editor module chemlights are automatically detected
+- Pre-placed chemlights glow in the editor
 - Supports vanilla blue, green, yellow, and red chemlights
 - Automatically cleans up when the chemlight fades
-- Works in multiplayer (server and all clients require the mod)
+
+### Multiplayer
+
+Client-side only. Players with the mod will see the lights. The server does not need the mod.
 
 ### License
 
