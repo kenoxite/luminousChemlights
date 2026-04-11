@@ -1,0 +1,1 @@
+#define MINLUMINANCE 100

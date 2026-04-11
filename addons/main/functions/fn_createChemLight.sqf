@@ -5,6 +5,8 @@ if (!canSuspend) exitWith {
     _this spawn KLC_fnc_createChemLight;
 };
 
+#include "\z\lumchem\addons\main\constants.hpp"
+
 params ["_chemlightObj", "_chemColor"];
 
 if (isNull _chemlightObj) exitWith {};
@@ -42,7 +44,7 @@ waitUntil {
     sleep 1;
     private _intensity = call KLC_fnc_adjustIntensity;
     _light setLightIntensity _intensity;
-    isNull _chemlightObj || (apertureParams # 3) <= KLC_minLuminance
+    isNull _chemlightObj || (apertureParams # 3) <= MINLUMINANCE
 };
 
 // Delete the light if it still exists

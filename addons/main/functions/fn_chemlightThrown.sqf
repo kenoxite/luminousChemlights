@@ -1,14 +1,16 @@
 // KLC_fnc_chemlightThrown 
 // Creates a visible light on thrown chemlights for all players
 
-// Exclude if luminance is low enough for the vanilla light to be visible
-if ((apertureParams # 3) <= KLC_minLuminance) exitWith {false};
+#include "\z\lumchem\addons\main\constants.hpp"
 
-params ["_ammo", "_projectile"];
+// Exclude if luminance is low enough for the vanilla light to be visible
+if ((apertureParams # 3) <= MINLUMINANCE) exitWith {false};
+
+params ["", "", "", "", "_ammo", "", "_projectile"];
 
 if (isNull _projectile) exitWith {};
 
-_this spawn {
+[_ammo, _projectile] spawn {
     params ["_ammo", "_projectile"];
 
     // Trying to emulate vanilla chemlight light activation timing
