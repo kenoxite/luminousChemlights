@@ -6,7 +6,7 @@
 private _baseIntensity = 1000; // 3000 = brightness 1
 private _maxIntensity = 20000;
 private _baseLuminance = MINLUMINANCE;
-private _maxLuminance = 14000;
+private _maxLuminance = 10000;
 private _currentLuminance = apertureParams # 3;
 
 private _intensity = linearConversion [
