@@ -15,6 +15,6 @@ dlcColor[] =
 	1
 };
 
-overview = "Makes thrown chemlights emit visible light during daytime."; // Overview text, displayed from the extension menu
+overview = "Makes thrown chemlights glow in daytime."; // Overview text, displayed from the extension menu
 hideName = 0; // Hide the extension name
 hidePicture = 0; // Hide the extension menu
