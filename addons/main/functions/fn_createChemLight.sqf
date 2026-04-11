@@ -11,6 +11,8 @@ params ["_chemlightObj", "_chemColor"];
 
 if (isNull _chemlightObj) exitWith {};
 
+_chemlightObj setVariable ["KLC_lightActive", true, true];
+
 private _chemColorLC = toLower _chemColor;
 private _color = switch (true) do {
     case ("red" in _chemColorLC): {[1,0.2,0.2]};

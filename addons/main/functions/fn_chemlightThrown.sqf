@@ -10,6 +10,8 @@ params ["", "", "", "", "_ammo", "", "_projectile"];
 
 if (isNull _projectile) exitWith {};
 
+if (_projectile getVariable ["KLC_lightActive", false]) exitWith {};
+
 [_ammo, _projectile] spawn {
     params ["_ammo", "_projectile"];
 
