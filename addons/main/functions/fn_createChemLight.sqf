@@ -5,8 +5,6 @@ if (!canSuspend) exitWith {
     _this spawn KLC_fnc_createChemLight;
 };
 
-#include "\z\lumchem\addons\main\constants.hpp"
-
 params ["_chemlightObj", "_chemColor"];
 
 if (isNull _chemlightObj) exitWith {};
@@ -41,15 +39,7 @@ _light setLightAttenuation [
 ];
 _light lightAttachObject [_chemlightObj, [0,0,0.15]];
 
-// Wait for chemlight to disappear, then clean up. Adjust intensity to luminance in the meantime
-waitUntil {
-    sleep 1;
-    private _intensity = call KLC_fnc_adjustIntensity;
-    _light setLightIntensity _intensity;
-    isNull _chemlightObj || (apertureParams # 3) <= MINLUMINANCE
-};
-
-// Delete the light if it still exists
-if (!isNull _light) then {
-    deleteVehicle _light;
-};
+// Manage light intensity and deletion
+private _managed = missionNamespace getVariable ["KLC_managed", []];
+_managed pushBack [_chemlightObj, _light];
+missionNamespace setVariable ["KLC_managed", _managed];
