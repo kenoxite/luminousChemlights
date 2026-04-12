@@ -8,7 +8,7 @@ You can check the already packed version by visiting this addon's [Steam Worksho
 
 ### Features
 
-- Thrown chemlights emit light during daytime
+- All chemlights emit light during daytime
 - Light intensity adjusts to current ambient luminance
 - Editor module chemlights are automatically detected
 - Pre-placed chemlights glow in the editor
