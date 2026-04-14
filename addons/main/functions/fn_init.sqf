@@ -16,6 +16,9 @@ missionNamespace setVariable ["KLC_managed", []];
 addMissionEventHandler ["ProjectileCreated", {
 	params ["_projectile"];
 
+    // Exclude if luminance is low enough for the vanilla light to be visible
+    if ((apertureParams # 3) <= MINLUMINANCE) exitWith {false};
+
     if (_projectile getVariable ["KLC_lightActive", false]) exitWith {};
 
     private _type = typeOf _projectile;
