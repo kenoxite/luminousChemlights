@@ -6,7 +6,7 @@
 // Exclude if luminance is low enough for the vanilla light to be visible
 if ((apertureParams # 3) <= MINLUMINANCE) exitWith {false};
 
-params ["", "", "", "", "_ammo", "", "_projectile"];
+params ["_ammo", "_projectile"];
 
 if (isNull _projectile) exitWith {};
 
