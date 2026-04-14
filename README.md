@@ -4,7 +4,7 @@
 
 Makes chemlights glow in daytime, with intensity that adjusts to the current ambient luminance.
 
-You can check the already packed version by visiting this addon's [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3704042350) page.
+You can check the already packed version by visiting this addon's [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3706674360) page.
 
 ### Features
 
