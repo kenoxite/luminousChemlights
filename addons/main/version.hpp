@@ -1,6 +1,8 @@
-#define VERSION_MAJOR 1
-#define VERSION_MINOR 0
-#define VERSION_PATCH 0
+#include "\z\lumchem\addons\main\script_version.hpp"
+
+#define VERSION_MAJOR MAJOR
+#define VERSION_MINOR MINOR
+#define VERSION_PATCH PATCH
 
 #define VERSION_AR VERSION_MAJOR,VERSION_MINOR,VERSION_PATCH
 #define STRINGIFY(s) #s
