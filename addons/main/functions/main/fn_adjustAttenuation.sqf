@@ -4,7 +4,7 @@
 params [["_type", "normal"]];
 
 call {
-    if (KLC_aceThrowing) exitWith {
+    if (KLC_aceChemlights) exitWith {
         if (_type == "high") exitWith {
             [
                 0,  // start 

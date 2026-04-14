@@ -5,6 +5,7 @@ if (!hasInterface) exitWith {};
 // Mod detection
 private _cfgPatches = configFile >> "CfgPatches";
 KLC_aceThrowing = isClass (_cfgPatches >> "ace_advanced_throwing");
+KLC_aceChemlights = isClass (_cfgPatches >> "ace_chemlights");
 _cfgPatches = nil;
 
 #include "\z\lumchem\addons\main\constants.hpp"
@@ -18,7 +19,7 @@ addMissionEventHandler ["ProjectileCreated", {
     if (_projectile getVariable ["KLC_lightActive", false]) exitWith {};
 
     private _type = typeOf _projectile;
-    
+
     if ("chemlight" in toLower _type) then {
         [_projectile, _type] remoteExec ["KLC_fnc_createChemLight", 0];
     };

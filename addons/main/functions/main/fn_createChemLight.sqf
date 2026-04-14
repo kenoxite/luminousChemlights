@@ -17,13 +17,23 @@ private _color = switch (true) do {
     case ("green" in _chemColorLC): {[0.2,1,0.2]};
     case ("blue" in _chemColorLC): {[0, 0.6, 0.6]};
     case ("yellow" in _chemColorLC): {[1,1,0.2]};
+    case ("orange" in _chemColorLC): {[1, 0.5, 0]};
     default {[1,1,1]};
+};
+
+private _chemType = call {
+    if (KLC_aceChemlights) exitWith {
+        if ("_hi" in _chemColorLC) exitWith { "high" };
+        if ("_ultrahi" in _chemColorLC) exitWith { "ultra" };
+        "normal"
+    };
+    "normal"
 };
 
 // Create local lightpoint
 private _light = "#lightpoint" createVehicleLocal [0,0,0];
 private _intensity = call KLC_fnc_adjustIntensity;
-private _attenuation = [] call KLC_fnc_adjustAttenuation;
+private _attenuation = [_chemType] call KLC_fnc_adjustAttenuation;
 _light setLightColor _color;
 _light setLightAmbient _color;
 _light setLightIntensity _intensity;
