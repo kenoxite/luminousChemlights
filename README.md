@@ -14,6 +14,7 @@ You can check the already packed version by visiting this addon's [Steam Worksho
 - Pre-placed chemlights glow in the editor
 - Supports vanilla blue, green, yellow, and red chemlights
 - Automatically cleans up when the chemlight fades
+- Compatible with ace
 
 ### Multiplayer
 
