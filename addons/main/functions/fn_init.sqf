@@ -24,7 +24,7 @@ addMissionEventHandler ["ProjectileCreated", {
     private _type = typeOf _projectile;
 
     if ("chemlight" in toLower _type) then {
-        [_projectile, _type] remoteExec ["KLC_fnc_createChemLight", 0];
+        [_projectile, _type] remoteExec ["KLC_fnc_createChemLight", 0, true];
     };
 }];
 
@@ -35,7 +35,7 @@ addMissionEventHandler ["ProjectileCreated", {
         if (isNull _x) then { continue };
         if (_x getVariable ["KLC_lightActive", false]) then { continue };
         
-        [_x, typeOf _x] remoteExec ["KLC_fnc_createChemLight", 0];
+        [_x, typeOf _x] remoteExec ["KLC_fnc_createChemLight", 0, true];
     } forEach (allMissionObjects "Chemlight_base");
 
     // Change light intensity and remove lights

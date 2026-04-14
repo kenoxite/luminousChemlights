@@ -24,5 +24,5 @@ if (_projectile getVariable ["KLC_lightActive", false]) exitWith {};
         };
     
     // Create local lights for everyone
-    [_projectile, _ammo] remoteExec ["KLC_fnc_createChemLight", 0];
+    [_projectile, _ammo] remoteExec ["KLC_fnc_createChemLight", 0, true];
 };
