@@ -15,18 +15,7 @@ class CfgPatches {
     };
 };
 
-// class CfgVehicles {
-// 	class Man;
-// 	class CAManBase:Man {
-//         class EventHandlers {
-//             class KLC_EH_Init {
-//                 init = "_this call KLC_fnc_addEventHandler;";
-//             };
-//         };
-//     };
-// };
-
-#define KLC_EDITOR "KLC_aceThrowing = isClass (configFile >> 'CfgPatches' >> 'ace_advanced_throwing'); call compile preprocessFileLineNumbers '\z\lumchem\addons\main\functions\fn_edenInit.sqf';"
+#define KLC_EDITOR "KLC_aceChemlights = isClass (configFile >> 'CfgPatches' >> 'ace_chemlights'); call compile preprocessFileLineNumbers '\z\lumchem\addons\main\functions\fn_edenInit.sqf';"
 
 class Cfg3DEN
 {
@@ -52,8 +41,6 @@ class CfgFunctions {
         };
         class Main {
             file = "\z\lumchem\addons\main\functions\main";
-            class addEventHandler {};
-            class removeEventHandler {};
             class chemlightThrown {};
             class createChemLight {};
             class adjustIntensity {};
