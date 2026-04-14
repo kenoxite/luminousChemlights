@@ -26,7 +26,7 @@ addMissionEventHandler ["ProjectileCreated", {
 }];
 
 [] spawn {
-    // Catch preplaced or currently spawned chemlights
+    // Catch preplaced chemlights
     sleep 2;
     {
         if (isNull _x) then { continue };
